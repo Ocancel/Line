@@ -1,7 +1,7 @@
 <div class="w-full md:w-2/3">
-  <div class="mt-6 lg:mt-10 border-b border-gray-400">
+  <div class="mt-6 lg:mt-10 border-internal border-gray-400">
     <% posts.forEach(function(post, index) { %>
-      <div class="border-t border-gray-400 py-6 sm:py-8 lg:py-10">
+      <div class="border-internal border-gray-400 py-6 sm:py-8 lg:py-10">
         <div class="md:flex items-center justify-between">
           <div>
             <h3 class="text-gray-900 sm:text-lg lg:text-xl">
@@ -23,7 +23,7 @@
           <% if (themeConfig.showFeatureImage && post.feature) { %>
             <div class="md:pl-2 mt-4 md:mt-0">
               <a href="<%= post.link %>">
-                <img class="h-32 md:w-40 w-full object-cover rounded-sm" src="<%= post.feature %>" alt="<%= post.title %>">
+                <img class="h-32 md:w-56 w-full object-cover rounded-sm" src="<%= post.feature %>" alt="<%= post.title %>">
               </a>
             </div>
           <% } %>

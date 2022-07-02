@@ -4,7 +4,7 @@
     <% currentPost.tags.forEach((tag) => { %>
       <% if (count < 3 && post.tags.find((tag2) => tag2.name === tag.name)) { %>
         <% count += 1 %>
-        <div class="border-t border-gray-400 py-6">
+        <div class="border-internal border-gray-400 py-6">
           <a href="<%= post.link %>" class="text-lg hover:underline my-2 inline-block"><%= post.title %></a>
         </div>
       <% } %>

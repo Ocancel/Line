@@ -4,6 +4,13 @@
   "author": "EryouHao",
   "customConfig": [
     {
+      "name": "author",
+      "label": "作者",
+      "group": "博客",
+      "value": "",
+      "type": "input"
+    },
+    {
       "name": "github",
       "label": "Github",
       "group": "社交",
@@ -28,48 +35,8 @@
       "note": "链接地址"
     },
     {
-      "name": "zhihu",
-      "label": "知乎",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "facebook",
-      "label": "Facebook",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "telegram",
-      "label": "Telegram",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "dribbble",
-      "label": "Dribbble",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
       "name": "instagram",
       "label": "Instagram",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "behance",
-      "label": "Behance",
       "group": "社交",
       "value": "",
       "type": "input",
@@ -85,16 +52,16 @@
     },
     {
       "name": "customCss",
-      "label": "自定义CSS",
-      "group": "自定义样式",
+      "label": "CSS",
+      "group": "样式",
       "value": "",
       "type": "textarea",
       "note": ""
     },
     {
       "name": "ga",
-      "label": "跟踪 ID",
-      "group": "谷歌统计",
+      "label": "Google Track ID",
+      "group": "统计",
       "value": "",
       "type": "input",
       "note": "UA-xxxxxxxxx-x"
