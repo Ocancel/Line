@@ -37,8 +37,8 @@ map.set('关于','user'); %>
           <% if (site.customConfig[item]) { %>
             <li class="link-li">
               <a href="<%= site.customConfig[item] %>" class="block lg:mt-0 lg:ml-8 align-center hover:text-gray-900" target="_blank">
-                <i class="icon icon-<%- { github: 'GitHub', twitter: 'Twitter', weibo: 'Weibo', instagram: 'Instagram', qq: 'QQ' }[item] %>"></i>
-                <!-- <%- { github: 'GitHub', twitter: 'Twitter', weibo: 'Weibo', instagram: 'Instagram' }[item] %> -->
+                <i class="icon icon-<%- [item] %>"></i>
+                <%- { github: 'GitHub', twitter: 'Twitter', weibo: 'Weibo', instagram: 'Instagram' }[item] %>
               </a>
             </li>
           <% } %>
