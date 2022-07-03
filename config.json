@@ -43,14 +43,6 @@
       "note": "链接地址"
     },
     {
-      "name": "qq",
-      "label": "QQ",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
       "name": "customCss",
       "label": "CSS",
       "group": "样式",
