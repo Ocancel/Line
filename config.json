@@ -11,6 +11,13 @@
       "type": "input"
     },
     {
+      "name": "brief",
+      "label": "简介",
+      "group": "博客",
+      "value": "",
+      "type": "input"
+    },
+    {
       "name": "github",
       "label": "Github",
       "group": "社交",

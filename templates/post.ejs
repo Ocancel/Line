@@ -2,7 +2,7 @@
 <head>
   <%- include('./includes/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
   <meta name="description" content="<%= post.description %>">
-  <script src="<%= themeConfig.domain %>/media/prism.js"></script>
+  <script src="<%= themeConfig.domain %>/media/js/prism.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 <body>
@@ -57,7 +57,7 @@
       <ul class="post-copyright">
         <li class="post-copyright-author">
           <strong class="language" data-lan="author">本文作者：</strong>
-          <%= site.customConfig.author %>
+          <%- site.customConfig.author %>
         </li>
         <li class="post-copyright-link">
           <strong class="language" data-lan="link">本文链接：</strong>

@@ -9,7 +9,12 @@
       <%- include('./includes/header') %>
       <% if (site.isHomepage) { %>
         <div class="pt-10 md:py-6 flex items-start">
-          <img class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-8 block flex-shrink-0" src="<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>" alt="">
+          <div class="w-24 h-24 md:w-32 md:h-32 mx-8 block flex-shrink-0">
+            <img class="w-24 h-24 md:w-32 md:h-32 rounded-full" src="<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>" alt="">
+            <div class="brief-div">
+              <p id="brief"><%- site.customConfig.brief %></p>
+            </div>
+          </div>
           <div class="text-lg sm:text-xl lg:text-2xl text-gray-700">
             <%- themeConfig.siteDescription %>
           </div>
@@ -29,5 +34,6 @@
       <%- include('./includes/footer') %>
     </div>
   </div>
+  <script src="<%= themeConfig.domain %>/media/js/description.js"></script>
 </body>
 </html>
