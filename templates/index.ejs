@@ -15,8 +15,20 @@
               <p id="brief"><%- site.customConfig.brief %></p>
             </div>
           </div>
-          <div class="text-base sm:text-xl lg:text-2xl text-gray-700">
-            <%- themeConfig.siteDescription %>
+          <div class="text-base sm:text-xl flex-end lg:text-2xl text-gray-700">
+            <!-- <%- themeConfig.siteDescription %> -->
+            <div class="sentence-windows">
+              <div class="sentence-content">
+                <p class="sentence-hi"> </p>
+                <p class="sentence-from"> </p>
+                <div class="sentence-progress-con">
+                  <div class="sentence-progress-time" style="left:0%"></div>
+                </div>
+              </div>
+              <div class="sentence-button">
+                <input type="button" class="sentence-sub" value="Update">
+              </div>
+            </div>
           </div>
         </div>
       <% } %>
