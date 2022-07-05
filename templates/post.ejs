@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
 <head>
   <%- include('./includes/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
   <meta name="description" content="<%= post.description %>">
@@ -24,7 +25,6 @@
                 <%- include('./includes/gitalk') %>
               </div>
             <% } %>
-  
             <% if (commentSetting.commentPlatform === 'disqus') { %>
               <div class="mt-6">
                 <%- include('./includes/disqus') %>
@@ -54,25 +54,25 @@
         <% } %>
       </div>
       <% if (!post.link.includes('about')) { %>
-      <ul class="post-copyright">
-        <li class="post-copyright-author">
-          <strong class="language" data-lan="author">本文作者：</strong>
-          <%- site.customConfig.author %>
-        </li>
-        <li class="post-copyright-link">
-          <strong class="language" data-lan="link">本文链接：</strong>
-          <a href="<%= post.link %>" title="<%= post.title %>"><%= post.link %></a>
-        </li>
-        <li class="post-copyright-license">
-          <strong class="language" data-lan="copyright">版权声明： </strong>
-          文章除特别声明外，均采用
-          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">
-            <i class="icon icon-copyright"></i>
-            BY-NC-SA
-          </a>
-          许可协议
-        </li>
-      </ul>
+        <ul class="post-copyright">
+          <li class="post-copyright-author">
+            <strong class="language" data-lan="author">本文作者：</strong>
+            <%- site.customConfig.author %>
+          </li>
+          <li class="post-copyright-link">
+            <strong class="language" data-lan="link">本文链接：</strong>
+            <a href="<%= post.link %>" title="<%= post.title %>"><%= post.link %></a>
+          </li>
+          <li class="post-copyright-license">
+            <strong class="language" data-lan="copyright">版权声明： </strong>
+            文章除特别声明外，均采用
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">
+              <i class="icon icon-copyright"></i>
+              BY-NC-SA
+            </a>
+            许可协议
+          </li>
+        </ul>
       <% } %>
       <%- include('./includes/footer') %>
     </div>

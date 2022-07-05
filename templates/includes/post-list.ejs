@@ -8,12 +8,11 @@
               <a href="<%= post.link %>" class="hover:underline"><%= post.title %></a>
             </h3>
             <div class="flex flex-wrap text-gray-700 text-sm sm:text-base lg:text-lg mt-2 sm:mt-3 lg:mt-3">
-                <% post.tags.forEach(function(tag, tagIndex) { %>
-                  <%if (tagIndex === 0) { %>
-                    <a href="<%= tag.link %>" class="hover:underline hover:text-gray-900"><%= tag.name %></a>
-                  <% } %>
-                <% }); %>
-              
+              <% post.tags.forEach(function(tag, tagIndex) { %>
+                <%if (tagIndex === 0) { %>
+                  <a href="<%= tag.link %>" class="hover:underline hover:text-gray-900"><%= tag.name %></a>
+                <% } %>
+              <% }); %>
               <div class="mx-2 text-gray-500">•</div>
               <div><%= post.dateFormat %></div>
               <div class="mx-2 text-gray-500">•</div>
