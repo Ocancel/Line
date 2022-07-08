@@ -15,9 +15,7 @@ window.onload = () => {
   const thumbOpen = document.getElementById('thumb-open')
   const thumbClose = document.getElementById('thumb-close')
 
-  console.log('thumbClose', thumbClose)
   menu.onclick = () => {
-    console.log('run...')
     navList.classList.toggle('block')
     navList.classList.toggle('hidden')
     thumbOpen.classList.toggle('hidden')
@@ -44,7 +42,6 @@ window.onload = () => {
 				var Hi = JSON.parse(gethi.responseText);
 				sentence.innerHTML = Hi.hitokoto;
 				from.innerHTML = "From "+ Hi.from.substr(0, 10);
-				console.log(Hi.hitokoto);
 			}
 		}
 	}
@@ -58,12 +55,10 @@ window.onload = () => {
 		return Math.floor(Math.random()*(81)+60)
 	}
 	function time_update(){
-		console.log(queue);
 		queue[queue.length] = setInterval(function(){
 			time_progress.style.left=time_progress.style.left=="0%"?"100%":"0%";
 			update();
 			setcolor();
-			console.log((new Date().getTime()-times)/1000);
 			times = new Date().getTime();
 			},12000);
 	}
@@ -72,7 +67,6 @@ window.onload = () => {
 			clearInterval(queue[i]);
 		}
 		queue=[];
-		console.log(queue);
 		update();
 		time_update();
 	})
