@@ -103,8 +103,7 @@
   
     // 搜索结果关键字高亮
     function keywordHighlight(searchedContent) {
-      var searchedPostContent = searchedContent.item.content + searchedContent.item.title// 搜索结果内容预览
-      console.log(searchedPostContent)
+      var searchedPostContent = searchedContent.item.title + searchedContent.item.content // 搜索结果内容预览
       var preview = ''
       for (var i = 0; i < searchedContent.matches.length; i++) {
         if (searchedContent.matches[i].key === 'content') { // 如果匹配到文章内容，截取关键字
