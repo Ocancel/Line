@@ -26,11 +26,13 @@ map.set('关于','user'); %>
       <% menus.forEach(function(menu, index) { %>
         <% if (menu.openType === 'External') { %>
           <a href="<%= menu.link %>" class="nav-link" target="_blank">
-            <i class="icon icon-<%= map.get(menu.name) %>"></i> <%= menu.name %>
+            <i class="icon icon-<%= map.get(menu.name) %>"></i> 
+            <%= menu.name %>
           </a>
         <% } else { %>
           <a href="<%= menu.link %>" class="nav-link">
-            <i class="icon icon-<%= map.get(menu.name) %>"></i> <%= menu.name %>
+            <i class="icon icon-<%= map.get(menu.name) %>"></i> 
+            <%= menu.name %>
           </a>
         <% } %>
       <% }); %>
