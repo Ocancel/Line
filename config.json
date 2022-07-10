@@ -34,6 +34,14 @@
       "note": "邮箱地址"
     },
     {
+      "name": "telegram",
+      "label": "Telegram",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "邮箱地址"
+    },
+    {
       "name": "twitter",
       "label": "Twitter",
       "group": "社交",
