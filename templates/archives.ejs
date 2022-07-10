@@ -13,7 +13,7 @@
             <div class="border-internal border-gray-400 py-6 sm:py-8 lg:py-10">
               <% posts.forEach(function(post) { %>
                 <div class="flex flex-col md:flex-row flex-wrap justify-between sm:text-lg lg:text-xl mb-6">
-                  <a href="<%= post.link %>" class="text-gray-900 hover:underline"><%= post.title %></a>
+                  <a href="<%= post.link %>" class="post-title text-gray-900 hover:text-red-600"><%= post.title %></a>
                   <div class="text-gray-700"><%= post.dateFormat %></div>
                 </div>
               <% }); %>
