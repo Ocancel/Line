@@ -45,13 +45,20 @@ map.set('关于','user'); %>
     </div>
     <div class="lg:flex">
       <ul>
-        <% ['github', 'twitter', 'weibo', 'instagram'].forEach((item) => { %>
+        <% ['github', 'email', 'twitter', 'instagram', 'weibo'].forEach((item) => { %>
           <% if (site.customConfig[item]) { %>
             <li class="link-li">
-              <a href="<%= site.customConfig[item] %>" class="block lg:mt-0 lg:ml-8 align-center hover:text-gray-900" target="_blank">
-                <i class="icon icon-<%- [item] %>"></i>
-                <!-- <%- { github: 'GitHub', twitter: 'Twitter', weibo: 'Weibo', instagram: 'Instagram' }[item] %> -->
-              </a>
+              <% if (item === 'email') { %>
+                <a href="mailto:<%= site.customConfig[item] %>" class="block lg:mt-0 lg:ml-8 align-center hover:text-gray-900" target="_blank">
+                  <i class="icon icon-<%- [item] %>"></i>
+                  <!-- <%- { email: 'Email' }[item] %> -->
+                </a>
+              <% } else { %>
+                <a href="<%= site.customConfig[item] %>" class="block lg:mt-0 lg:ml-8 align-center hover:text-gray-900" target="_blank">
+                  <i class="icon icon-<%- [item] %>"></i>
+                  <!-- <%- { github: 'GitHub', twitter: 'Twitter', instagram: 'Instagram', weibo: 'Weibo' }[item] %> -->
+                </a>
+              <% } %>
             </li>
           <% } %>
         <% }) %>
