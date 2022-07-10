@@ -34,6 +34,12 @@ map.set('关于','user'); %>
           </a>
         <% } %>
       <% }); %>
+      <div class="search-frame">
+        <i class="icon icon-search"></i>
+        <form id="search-form" action="<%= themeConfig.domain %>/search/">
+          <input name="searchContent" type="text" placeholder="Search..." />
+        </form>
+      </div>
     </div>
     <div class="lg:flex">
       <ul>

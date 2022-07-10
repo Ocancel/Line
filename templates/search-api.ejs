@@ -1,0 +1,39 @@
+<%- output() %><%  -%>
+<%
+function refine(str){
+   return str.replace(/(<(\/?)(\w+)[^>]*>)|(<!--[\s\S]*?-->)/g ,'') 
+   .replace(/\s+/g,' ') 
+}
+
+function output(){
+   const api = {
+      // customConfig: site.customConfig,
+      // tags: site.tags,
+      // menus: site.menus,
+      themeConfig: site.themeConfig,
+      posts: [] 
+   }
+site.posts.forEach(post => {
+   if(!post.hideInList){
+      const postInfo={
+         // toc: post.toc,
+         // isTop: post.isTop,
+         // fileName: post.fileName,
+         // abstract: post.abstract,
+         // description: refine(post.description),
+         title: post.title,
+         // content: refine(post.content),
+         tags: post.tags,
+         feature: post.feature,
+         link: post.link,
+         stats: post.stats,
+         date: post.date,
+         dateFormat: post.dateFormat
+      }
+      api.posts.push(postInfo)
+   }
+})
+
+return JSON.stringify(api)
+}
+%>
