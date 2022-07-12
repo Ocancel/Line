@@ -12,7 +12,12 @@
           <div class="mt-6 lg:mt-10 border-internal border-gray-400">
             <div class="border-internal border-gray-400 py-6 sm:py-8 lg:py-10">
               <% tags.forEach((tag, index) => { %>
-                <a href="<%= tag.link %>" class="py-1 px-4 border-gray-300 border text-sm inline-block text-gray-700 hover:text-gray-900 rounded mr-2 mb-2"># <%= tag.name %> [<%= tag.count %>]</a>
+                <a href="<%= tag.link %>" class="py-1 px-4 border-gray-300 border text-sm inline-block text-gray-700 hover:text-gray-900 rounded mr-2 mb-2">
+                  # <%= tag.name %>
+                  <code class="tag-count">
+                    <%= tag.count %>
+                  </code>
+                </a>
               <% }); %>
             </div>
           </div>
