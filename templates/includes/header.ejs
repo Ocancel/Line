@@ -14,11 +14,9 @@ map.set('关于','user'); %>
   <div class="block lg:hidden" id="thumb-menu">
     <button id="thumb-open" type="button" class="block">
       <i class="icon icon-menu-close"></i>
-      <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 6H22V7H2V6ZM2 12H22V13H2V12ZM22 18H2V19H22V18Z" class="fill-current text-gray-900"></path></svg> -->
     </button>
     <button id="thumb-close" type="button" class="hidden">
       <i class="icon icon-menu-open"></i>
-      <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4L20 20M20 4L4 20" class="" stroke="#1A202C"></path></svg> -->
     </button>
   </div>
 </div>
@@ -47,7 +45,7 @@ map.set('关于','user'); %>
     </div>
     <div class="lg:flex">
       <ul>
-        <% ['github', 'email', 'telegram', 'twitter', 'instagram', 'weibo'].forEach((item) => { %>
+        <% ['github', 'twitter', 'instagram', 'telegram', 'weibo', 'email'].forEach((item) => { %>
           <% if (site.customConfig[item]) { %>
             <li class="link-li">
               <% if (item === 'email') { %>
@@ -58,7 +56,7 @@ map.set('关于','user'); %>
               <% } else { %>
                 <a href="<%= site.customConfig[item] %>" class="block lg:mt-0 lg:ml-8 align-center hover:text-gray-900" target="_blank">
                   <i class="icon icon-<%- [item] %>"></i>
-                  <!-- <%- { github: 'GitHub', telegram: 'Telegram', twitter: 'Twitter', instagram: 'Instagram', weibo: 'Weibo' }[item] %> -->
+                  <!-- <%- { github: 'GitHub', twitter: 'Twitter', instagram: 'Instagram', telegram: 'Telegram', weibo: 'Weibo' }[item] %> -->
                 </a>
               <% } %>
             </li>
