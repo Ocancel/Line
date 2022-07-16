@@ -74,6 +74,14 @@
       "note": ""
     },
     {
+      "name": "weChatPayQR",
+      "label": "微信收款二维码",
+      "group": "赞赏",
+      "value": "",
+      "type": "picture-upload",
+      "note": ""
+    },
+    {
       "name": "ga",
       "label": "Google Track ID",
       "group": "统计",

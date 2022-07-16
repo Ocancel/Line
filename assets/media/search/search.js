@@ -126,7 +126,6 @@
         url: '../search-api/index.html' + '?_=' + UPDATE_TIME,
         success: function (data) {
           callback(JSON.parse(data))
-          console.log(JSON.parse(data))
         }
       })
     }

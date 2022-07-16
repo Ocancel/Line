@@ -50,6 +50,11 @@
                 <% }); %>
               </div>
               <h4 class="text-base font-thin text-gray-700 mb-2">
+                <i class="icon icon-words"></i>
+                字数
+              </h4>
+              <div class="text-lg mb-6"><%= post.stats.words %> Character</div>
+              <h4 class="text-base font-thin text-gray-700 mb-2">
                 <i class="icon icon-read"></i>
                 阅读时间
               </h4>
@@ -61,6 +66,7 @@
               <div class="border-internal border-gray-400">
                 <%- include('./includes/related-posts', { currentPost: post }) %>
               </div>
+              <%- include('./includes/sponsor') %>
             </div>
           </div>
         <% } %>
