@@ -66,19 +66,52 @@
       "note": "邮箱地址"
     },
     {
-      "name": "customCss",
-      "label": "CSS",
-      "group": "样式",
-      "value": "",
-      "type": "textarea",
-      "note": ""
-    },
-    {
       "name": "weChatPayQR",
       "label": "微信收款二维码",
       "group": "赞赏",
       "value": "",
       "type": "picture-upload",
+      "note": ""
+    },
+    {
+      "name": "friends",
+      "label": "友情链接",
+      "group": "友链",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        {
+          "label": "名称",
+          "name": "siteName",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "链接",
+          "name": "siteLink",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "头像",
+          "name": "siteAvator",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "介绍",
+          "name": "siteDesc",
+          "type": "input",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "customCss",
+      "label": "CSS",
+      "group": "样式",
+      "value": "",
+      "type": "textarea",
       "note": ""
     },
     {

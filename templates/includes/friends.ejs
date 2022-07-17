@@ -1,0 +1,30 @@
+<% if (site.customConfig.friends.length > 0) { %>
+    <h4 class="text-base font-thin text-gray-700 mb-2 mt-6">
+        <i class="icon icon-friends"></i>
+        友情链接
+    </h4>
+    <% site.customConfig.friends.forEach((friend) => { %>
+        <div class="friend-container flex mb-6">
+            <% if (friend.siteAvator) { %>
+                <img src="<%= friend.siteAvator %>" class="friend-avator w-12 h-12 md:w-12 md:h-12 mr-4" alt="">
+            <% } %>
+            <div class="block">
+                <% if (friend.siteName) { %>
+                    <a href="<%= friend.siteLink %>" class="hover:text-blue-600" target="_blank">
+                        <div class="friend-name inline-block mb-2">
+                            <i class="icon icon-friend-link"></i>
+                            <%= friend.siteName %>
+                        </div>
+                    </a>
+                    <% if (friend.siteDesc) { %>
+                        <div class="friend-desc text-gray-700"><%= friend.siteDesc %></div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    <% }) %>
+    <div class="friends-about text-gray-700">
+        <i class="icon icon-friends-about"></i>
+        如需添加友链，可邮件联系我！
+    </div>
+<% } %>
