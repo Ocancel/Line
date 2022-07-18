@@ -1,0 +1,11 @@
+<div class="text-base font-thin text-gray-700 mb-2 mt-6 md:mt-8">
+  <i class="icon icon-tag-cloud"></i>
+  标签云
+</div>
+<div>
+  <% site.tags.forEach(function(tag, tagIndex) { %>
+    <a href="<%= tag.link %>" class="py-1 px-4 border-gray-300 border text-sm inline-block text-gray-700 hover:text-gray-900 rounded mr-2 mb-2">
+      # <%= tag.name %>
+    </a>
+  <% }); %>
+</div>

@@ -41,7 +41,7 @@ window.onload = () => {
 			if (gethi.readyState===4 && gethi.status===200) {
 				var Hi = JSON.parse(gethi.responseText);
 				sentence.innerHTML = Hi.hitokoto;
-				from.innerHTML = "From "+ Hi.from.substr(0, 10);
+				from.innerHTML = "From "+ Hi.from.substr(0, 15);
 			}
 		}
 	}
