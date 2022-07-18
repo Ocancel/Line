@@ -11,9 +11,9 @@
             <div class="block">
                 <% if (friend.siteName) { %>
                     <a href="<%= friend.siteLink %>" class="hover:text-blue-600" target="_blank">
-                        <div class="friend-name inline-block mb-2">
-                            <i class="icon icon-friend-link"></i>
-                            <%= friend.siteName %>
+                        <div class="friend-link mb-2">
+                            <i class="icon icon-friend-link text-gray-700"></i>
+                            <div class="friend-name inline-block"><%= friend.siteName %></div>
                         </div>
                     </a>
                     <% if (friend.siteDesc) { %>
@@ -23,8 +23,10 @@
             </div>
         </div>
     <% }) %>
-    <div class="friends-about text-gray-700">
-        <i class="icon icon-friends-about"></i>
-        如需添加友链，可邮件联系我！
-    </div>
+    <% if (site.customConfig.friends.length <= 8) { %>
+        <div class="friends-about text-gray-700">
+            <i class="icon icon-friends-about"></i>
+            如需添加友链，可邮件联系我！
+        </div>
+    <% } %>
 <% } %>

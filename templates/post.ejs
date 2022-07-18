@@ -70,6 +70,13 @@
             </div>
           </div>
         <% } %>
+        <% if (post.link.includes('about')) { %>
+          <div class="w-full md:w-1/3">
+            <div class="mt-6 md:pl-8">
+              <%- include('./includes/friends') %>
+            </div>
+          </div>
+        <% } %>
       </div>
       <% if (!post.link.includes('about')) { %>
         <ul class="post-copyright">
