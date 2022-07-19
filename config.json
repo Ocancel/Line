@@ -107,6 +107,54 @@
       ]
     },
     {
+      "name": "gitalkStatus",
+      "label": "Gitalk",
+      "group": "Gitalk",
+      "value": false,
+      "type": "switch",
+      "note": ""
+    },
+    {
+      "name": "gitalkClientId",
+      "label": "ClientID",
+      "group": "Gitalk",
+      "value": "",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "gitalkClientSecret",
+      "label": "ClientSecret",
+      "group": "Gitalk",
+      "value": "",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "gitalkRepository",
+      "label": "Repository",
+      "group": "Gitalk",
+      "value": "",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "gitalkOwner",
+      "label": "Owner",
+      "group": "Gitalk",
+      "value": "",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "gitalkAdmin",
+      "label": "Admin",
+      "group": "Gitalk",
+      "value": "",
+      "type": "input",
+      "note": ""
+    },
+    {
       "name": "customCss",
       "label": "CSS",
       "group": "样式",

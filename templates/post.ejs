@@ -5,6 +5,8 @@
   <meta name="description" content="<%= post.description %>">
   <script src="<%= themeConfig.domain %>/media/js/prism.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 </head>
 <body>
   <div class="antialiased">
@@ -79,6 +81,9 @@
         <% } %>
       </div>
       <%- include('./includes/copyright') %>
+      <% if (site.customConfig.gitalkStatus) { %>
+        <%- include('./includes/gitalk') %>
+      <% } %>
       <%- include('./includes/footer') %>
     </div>
   </div>
