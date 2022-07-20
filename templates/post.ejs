@@ -81,7 +81,7 @@
         <% } %>
       </div>
       <%- include('./includes/copyright') %>
-      <% if (site.customConfig.gitalkStatus) { %>
+      <% if (site.customConfig.gitalkStatus && !post.link.includes('about')) { %>
         <%- include('./includes/gitalk') %>
       <% } %>
       <%- include('./includes/footer') %>
