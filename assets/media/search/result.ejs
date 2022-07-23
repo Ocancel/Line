@@ -1,8 +1,8 @@
 <div class="mt-6 lg:mt-10 border-internal border-gray-400">
   <% posts.forEach(function(post, index) { %>
     <div class="border-internal border-gray-400 py-6 sm:py-8 lg:py-10">
-      <div class="md:flex items-center justify-between">
-        <div>
+      <div class="post-list-bgc md:flex items-center justify-between">
+        <div class="post-list-text">
           <h3 class="post-list-title text-gray-900 sm:text-lg lg:text-xl">
             <a href="<%= post.link %>" class="hover:text-red-600">
               <% if (post.isTop) { %>
