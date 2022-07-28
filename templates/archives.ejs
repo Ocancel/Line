@@ -14,9 +14,6 @@
               <% posts.forEach(function(post) { %>
                 <div class="post-arch-bgc flex flex-col md:flex-row flex-wrap justify-between sm:text-lg lg:text-xl mb-6">
                   <a href="<%= post.link %>" class="post-list-title text-gray-900 hover:text-red-600">
-                    <% if (post.isTop) { %>
-                      <i class="icon icon-top post-top"></i>
-                    <% } %>
                     <%= post.title %>
                   </a>
                   <div class="post-arch-date text-gray-700">
