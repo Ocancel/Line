@@ -2,7 +2,8 @@
 map.set('首页','home'); 
 map.set('归档','archive'); 
 map.set('标签','tags');
-map.set('关于','user'); %>
+map.set('关于','user');
+map.set('随笔','essay'); %>
 <div class="flex justify-between items-center mt-10">
   <h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium md:font-normal leading-none">
     <div class="glitch-wrapper">
@@ -21,22 +22,26 @@ map.set('关于','user'); %>
   </div>
 </div>
 <div id="nav-list" class="lg:block hidden">
-  <div class="w-full block lg:flex lg:justify-between border-external-bottom lg:border-gray-400 mt-10 text-gray-700 font-medium lg:text-lg">
+  <div class="w-full block lg:flex lg:justify-between border-external-bottom lg:border-gray-400 mt-10 text-gray-700 lg:text-lg">
     <div class="lg:flex -mb-px">
       <% menus.forEach(function(menu, index) { %>
         <% if (menu.openType === 'External') { %>
-          <a href="<%= menu.link %>" class="nav-link" target="_blank">
-            <i class="icon icon-<%= map.get(menu.name) %>"></i> 
-            <%= menu.name %>
-          </a>
+          <div class="pb-4">
+            <a href="<%= menu.link %>" class="nav-link" target="_blank">
+              <i class="icon icon-<%= map.get(menu.name) %>"></i> 
+              <%= menu.name %>
+            </a>
+          </div>
         <% } else { %>
-          <a href="<%= menu.link %>" class="nav-link">
-            <i class="icon icon-<%= map.get(menu.name) %>"></i> 
-            <%= menu.name %>
-          </a>
+          <div class="pb-4">
+            <a href="<%= menu.link %>" class="nav-link">
+              <i class="icon icon-<%= map.get(menu.name) %>"></i> 
+              <%= menu.name %>
+            </a>
+          </div>
         <% } %>
       <% }); %>
-      <div class="search-frame">
+      <div class="search-frame pb-4">
         <i class="icon icon-search"></i>
         <form id="search-form" action="<%= themeConfig.domain %>/search/">
           <input name="searchContent" type="text" placeholder="Search..." />
@@ -47,7 +52,7 @@ map.set('关于','user'); %>
       <ul>
         <% ['github', 'twitter', 'instagram', 'telegram', 'weibo', 'email'].forEach((item) => { %>
           <% if (site.customConfig[item]) { %>
-            <li class="link-li">
+            <li class="inline-block">
               <% if (item === 'email') { %>
                 <a href="mailto:<%= site.customConfig[item] %>" class="block lg:mt-0 lg:ml-8 align-center hover:text-gray-900" target="_blank">
                   <i class="icon icon-<%- [item] %>"></i>
@@ -63,7 +68,7 @@ map.set('关于','user'); %>
           <% } %>
         <% }) %>
       </ul>
-      <a href="<%= themeConfig.domain %>/atom.xml" class="block mt-6 lg:mt-0 lg:ml-8 align-center hover:text-gray-900" target="_blank">
+      <a href="<%= themeConfig.domain %>/atom.xml" class="block mt-4 lg:mt-0 lg:ml-8 align-center hover:text-gray-900" target="_blank">
         <i class="icon icon-rss"></i>
         RSS
       </a>

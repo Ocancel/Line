@@ -1,0 +1,22 @@
+<div class="w-full md:w-2/3">
+  <% if (site.customConfig.essays.length > 0) { %>
+    <div class="mt-6 lg:mt-10 border-internal border-gray-400">
+      <% site.customConfig.essays.forEach((essay) => { %>
+        <div class="border-internal border-gray-400 py-6 sm:py-8 lg:py-10">
+          <div class="essay-bgc items-center justify-between">
+            <div class="essay-content">
+              <%= essay.essayContent %>
+            </div>
+            <div class="essay-date">
+              <%= essay.essayDate %>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <div class="none-essay mt-6">
+      <h2>暂无随笔</h2>
+    </div>
+  <% } %>
+</div>

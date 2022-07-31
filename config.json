@@ -74,6 +74,27 @@
       "note": ""
     },
     {
+      "name": "essays",
+      "label": "随笔",
+      "group": "随笔",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        {
+          "label": "时间",
+          "name": "essayDate",
+          "type": "input",
+          "value": ""
+        },
+        {
+          "label": "内容",
+          "name": "essayContent",
+          "type": "textarea",
+          "value": ""
+        }
+      ]
+    },
+    {
       "name": "friends",
       "label": "友情链接",
       "group": "友链",
