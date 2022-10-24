@@ -1,23 +1,86 @@
+<% let essays = site.customConfig.essays.reverse(); %>
 <div class="w-full md:w-2/3">
-  <% if (site.customConfig.essays.length > 0) { %>
-    <div class="mt-6 lg:mt-10 border-internal border-gray-400">
-      <% site.customConfig.essays.reverse() %>
-      <% site.customConfig.essays.forEach((essay) => { %>
-        <div class="border-internal border-gray-400 py-6 sm:py-8 lg:py-10">
-          <div class="essay-bgc items-center justify-between">
-            <div class="essay-content">
-              <%= essay.essayContent %>
-            </div>
-            <div class="essay-date">
-              <%= essay.essayDate %>
-            </div>
+  <% if (essays.length > 0) { %>
+  <div class="mt-6 lg:mt-10 border-internal border-gray-400">
+    <div class="essay-main"></div>
+  </div>
+  <% } else { %>
+  <div class="none-essay mt-6">
+    <h2>暂无随笔</h2>
+  </div>
+  <% } %>
+  <div class="essays-main">
+    <div class="pagination-container mt-6 flex justify-between">
+      <span class="page-change prev"><i class="icon icon-prev-page"></i>Prev</span>
+      <div class="pagination"></div>
+      <span class="page-change next">Next<i class="icon icon-next-page"></i></span>
+    </div>
+  </div>
+</div>
+<script>
+  let essays = JSON.parse('<%- JSON.stringify(site.customConfig.essays.reverse()) %>');
+  let newMain = document.querySelector('.essay-main');
+  let pagination = document.querySelector('.pagination');
+  let pageCount = Math.ceil(essays.length / 5);
+  let newsDataRender = [];
+  let p = 1;
+  let render = () => {
+    newMain.innerHTML = '';
+    newsDataRender = essays.slice((p - 1) * 5, 5 * p);
+    newsDataRender.forEach((essay, index) => {
+      newMain.innerHTML += `
+      <div class="border-internal border-gray-400 py-6 sm:py-8 lg:py-10">
+        <div class="essay-bgc items-center justify-between">
+          <div class="essay-content">
+            ${essay.essayContent}
+          </div>
+          <div class="essay-date">
+            ${essay.essayDate}
           </div>
         </div>
-      <% }) %>
-    </div>
-  <% } else { %>
-    <div class="none-essay mt-6">
-      <h2>暂无随笔</h2>
-    </div>
-  <% } %>
-</div>
+      </div>`
+    });
+  };
+  render();
+  for (let i = 1; i <= pageCount; i++) {
+    pagination.innerHTML += `<a>${i}</a>`;
+  }
+  let asAll = pagination.querySelectorAll('a');
+  asAll[p - 1].classList.add('active');
+  asAll.forEach((item, index) => {
+    item.onclick = function () {
+      for (let j = 0; j < asAll.length; j++) {
+        asAll[j].classList.remove('active');
+      }
+      this.classList.add('active');
+      p = index + 1;
+      render();
+    }
+  });
+  let changePageClass = () => {
+    for (let j = 0; j < asAll.length; j++) {
+      asAll[j].classList.remove('active');
+    }
+    asAll[p - 1].classList.add('active');
+  };
+  let prev = document.querySelector('.prev');
+  prev.onclick = function (e) {
+    if (p <= 1) {
+      console.log(p);
+      return;
+    } else {
+      p = p - 1;
+      changePageClass();
+      render();
+    }
+  };
+  let next = document.querySelector('.next');
+  next.onclick = function () {
+    if (p >= asAll.length) {
+      return;
+    }
+    p = p + 1;
+    changePageClass();
+    render();
+  }
+</script>
