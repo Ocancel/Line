@@ -12,7 +12,7 @@
         <% if (friend.siteName) { %>
           <a href="<%= friend.siteLink %>" class="hover:text-blue-600" target="_blank">
             <div class="friend-link mb-2">
-              <i class="icon icon-friend-link text-gray-700"></i>
+              <!-- <i class="icon icon-friend-link text-gray-700"></i> -->
               <div class="friend-name inline-block"><%= friend.siteName %></div>
             </div>
           </a>
@@ -23,7 +23,7 @@
       </div>
     </div>
   <% }) %>
-  <% if (site.customConfig.friends.length <= 8) { %>
+  <% if (site.customConfig.prompt) { %>
     <div class="friends-about text-gray-700 mb-6">
       <i class="icon icon-friends-about"></i>
       如需添加友链，可邮件联系我！

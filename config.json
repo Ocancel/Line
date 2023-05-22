@@ -95,6 +95,14 @@
       ]
     },
     {
+      "name": "prompt",
+      "label": "友链提示",
+      "group": "友链",
+      "type": "switch",
+      "value": false,
+      "note": ""
+    },
+    {
       "name": "friends",
       "label": "友情链接",
       "group": "友链",
