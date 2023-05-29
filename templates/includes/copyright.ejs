@@ -1,15 +1,15 @@
 <% if (!post.link.includes('about')) { %>
   <ul class="post-copyright">
     <li class="post-copyright-author">
-      <strong class="language" data-lan="author">本文作者：</strong>
+      <strong class="language" data-lan="author">作者：</strong>
       <%- site.customConfig.author %>
     </li>
     <li class="post-copyright-link">
-      <strong class="language" data-lan="link">本文链接：</strong>
+      <strong class="language" data-lan="link">链接：</strong>
       <a href="<%= post.link %>" title="<%= post.title %>"><%= post.link %></a>
     </li>
     <li class="post-copyright-license">
-      <strong class="language" data-lan="copyright">版权声明： </strong>
+      <strong class="language" data-lan="copyright">声明： </strong>
       文章除特别声明外，均采用
       <a class="post-copyright-license-a" href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">
         <i class="icon icon-copyright"></i>
